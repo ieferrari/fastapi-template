@@ -28,9 +28,9 @@ jobs:
       #  uses: julianwachholz/flake8-action@v2.0.0
       
       - name: pylinter
-      uses: alexanderdamiani/pylinter@v1.2.0
-      with:
-        fail-on-isort: false
+        uses: alexanderdamiani/pylinter@v1.2.0
+        with:
+          fail-on-isort: false
         
       - name: Run tests
         run: pytest -vv
