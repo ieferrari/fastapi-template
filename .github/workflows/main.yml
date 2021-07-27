@@ -24,7 +24,7 @@ jobs:
       #  uses: isort/isort-action@v0.1.0
 
       - name: python-flake8
-       uses: julianwachholz/flake8-action@v2.0.0
+        uses: julianwachholz/flake8-action@v2.0.0
 
       # - name: pylinter
       #   uses: alexanderdamiani/pylinter@v1.2.0
