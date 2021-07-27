@@ -20,8 +20,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: python-isort
-        uses: isort/isort-action@v0.1.0
+      #- name: python-isort
+      #  uses: isort/isort-action@v0.1.0
       
       - name: python-flake8
         uses: julianwachholz/flake8-action@v2.0.0
