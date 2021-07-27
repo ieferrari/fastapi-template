@@ -30,7 +30,7 @@ jobs:
         uses: alexanderdamiani/pylinter@v1.2.0
         with:
           fail-on-isort: false
-          skip mypy : true
+          skip-mypy : true
         
       - name: Run tests
         run: pytest -vv
