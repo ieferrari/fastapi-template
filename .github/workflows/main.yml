@@ -22,7 +22,6 @@ jobs:
       
       #- name: python-isort
       #  uses: isort/isort-action@v0.1.0
-
       
       #- name: python-flake8
       #  uses: julianwachholz/flake8-action@v2.0.0
@@ -31,6 +30,7 @@ jobs:
         uses: alexanderdamiani/pylinter@v1.2.0
         with:
           fail-on-isort: false
+          skip mypy : true
         
       - name: Run tests
         run: pytest -vv
