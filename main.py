@@ -1,3 +1,4 @@
+"""Template for FastAPI applications """
 from fastapi import FastAPI
 
 
