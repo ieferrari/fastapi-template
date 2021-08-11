@@ -1,15 +1,16 @@
 # fastapi-template
 
-Template for FastAPI projects, that aims a fast implementation for generic projects. You will find many examples and options in every folder. Fork the repository, uncomment and modify the lines that are needed.
+Template for fast implementation in generic FastAPI projects. every folder has many examples and options. Fork the repository, uncomment and modify the lines that are needed.
 
 ## Features:
 * File structure
 * database connection code examples for SQLite, and PostgreSQL
 * models patterns and examples
 * schemas examples
-* html templates implementation
-* Oauth with JWT
+* Oauth2 with JWT
+* html templates implementation and static files server
 * tests
+* Continous integrations with github-Actions
 * scripts and instructions for deploy on multiple servers: heroku, vps(like aws)
 *  and other utilities.
 
@@ -31,3 +32,44 @@ fastapi-template
 ├── main.py
 └── routers.py
 ```
+***
+
+## Select a database server
+Uncomment the line for the selected database, sqLite or PostgreSQL, and delete the other.
+
+```python
+# db/database.py
+SQLALCHEMY_DATABASE_URL = "sqlite:///./app_database_connection/sql_app.db"
+SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
+```
+
+***
+## Common patterns for models in database
+
+
+***
+## Common schemas for data validation
+
+
+***
+## Common CRUD functions
+
+***
+## Basic html template implementation
+
+***
+## common routes for api-endpoints and html-responses
+
+
+***
+##  Basic unit-test structure and examples
+
+
+## yml file for CI integration in github-actions
+
+***
+## Deployment examples
+
+### Heroku
+
+###  AWS-EC2, digital-ocean-droplets
