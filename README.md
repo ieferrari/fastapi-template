@@ -1,6 +1,6 @@
 # fastapi-template
 
-Template for fast implementation in generic FastAPI projects. every folder has many examples and options. Fork the repository, uncomment and modify the lines that are needed.
+Template for fast implementation in generic FastAPI projects. 
 
 ## Features:
 * File structure
@@ -19,32 +19,44 @@ Template for fast implementation in generic FastAPI projects. every folder has m
 
 
 ## File structure
-```
-fastapi-template
-├── db
-│   ├── __init__.py
-│   └── database.py
-├── routers
-│   ├── __init__.py
-│   └── routers.py
-├── tests
-├── __init__.py
-├── main.py
-└── routers.py
-```
+
+    fastapi-template
+    ├── db
+    │   ├── __init__.py
+    │   └── database.py
+    ├── routers
+    │   ├── __init__.py
+    │   └── routers.py
+    ├── tests
+    ├── __init__.py
+    ├── main.py
+    └── routers.py
 ***
 
 ## Select a database server
 Uncomment the line for the selected database, sqLite or PostgreSQL, and delete the other.
 
-```python
-# db/database.py
-SQLALCHEMY_DATABASE_URL = "sqlite:///./app_database_connection/sql_app.db"
-SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
-```
+
+    # db/database.py
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./app_database_connection/sql_app.db"
+    SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
+
 
 ***
 ## Common patterns for models in database
+A standarf User model, with one to many relationship for Item Model
+
+User:
+* username
+* email
+* password
+* is_active
+* is_superuser
+* relationship to Items
+
+Item
+* label
+* owner: User
 
 
 ***
@@ -55,7 +67,15 @@ SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
 ## Common CRUD functions
 
 ***
-## Basic html template implementation
+## Basic HTML template implementation
+
+* HTML serving examples in  /routers/front.py using Jinja2Templates
+* HTML templates on /templates
+* static files on /static can be accessed with  src="/static/my_image.png"
+
+### 
+
+
 
 ***
 ## common routes for api-endpoints and html-responses
@@ -64,6 +84,7 @@ SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
 ***
 ##  Basic unit-test structure and examples
 
+***
 
 ## yml file for CI integration in github-actions
 
